@@ -1,0 +1,79 @@
+@import "./color.scss";
+
+.log-bg {
+    background-color: $primary;
+}
+
+.log-bg2 {
+    border-radius: 20px 20px 0 0;
+    background-color: $tertiary;
+    height: 100vh;
+    padding: 10px;
+}
+
+.log-title {
+    color: white;
+    margin: 25px;
+}
+
+.input-label {
+    margin-top: 10px;
+    font-size: 17px;
+    color: white;
+    width: 60%;
+}
+
+.input {
+    background-image: linear-gradient(180deg, $secondary, white);
+    border-radius: 10px;
+    border: 2px solid black;
+    margin-bottom: 15px;
+    width: 60%;
+    height: 8vh;
+    min-height: 50px;
+    padding: 10px;
+    font-size: 130%;
+}
+
+.log-btn {
+    margin-top: 20px;
+    padding: 35px;
+    width: 50%;
+    border: 3px solid $secondary;
+    border-radius: 30px;
+    font-size: larger;
+    color: white;
+    background-color: black;
+}
+
+.bot-nav {
+    z-index: 3;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 15vh;
+    min-height: 100px;
+    background-color: black;
+    padding: 15px;
+}
+
+.bot-nav-grad {
+    z-index: 2;
+    position: fixed;
+    bottom: 10vh;
+    width: 100%;
+    height: 10vh;
+    min-height: 75px;
+    background-image: linear-gradient(0deg, $almostBlack, #00000000);
+}
+
+.nav-img {
+    max-width: 100px;
+
+}
+
+.nav-link {
+    font-size: 30px;
+    text-align: center;
+    color: white;
+}
