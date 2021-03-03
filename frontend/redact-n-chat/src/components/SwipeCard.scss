@@ -1,0 +1,46 @@
+@import "../color.scss";
+
+.swipe-box {
+    border: 4px solid white;
+    border-radius: 30px;
+    background-color: black;
+    max-width: 300px;
+    overflow: hidden;
+    box-shadow: 0 15px 15px $almostBlack;
+}
+
+.swipe-img {
+    height: 300px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.swipe-name {
+    color: $green;
+    font-size: 25px;
+    vertical-align: middle;
+    overflow: hidden;
+}
+
+.swipe-years {
+    vertical-align: middle;
+    text-align: center;
+    background-color: $tertiary;
+    margin-left: 15px;
+    color: white;
+    border-radius: 50%;
+    padding: 4px 11px 4px 11px;
+    font-size: 30px;
+}
+
+.swipe-tech {
+    background-color: $primary;
+    padding: 5px 20px 5px 20px;
+    color: white;
+    border-radius: 10px;
+}
+
+.swipe-bio {
+    width: 90%;
+    color: $secondary;
+}
