@@ -1,0 +1,12 @@
+server:
+  port: 6970
+
+spring:
+  application:
+    name: CONFIG-SERVER
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/tobynboudreaux/Incubator/tree/main/backend/cloud-config-server
+          clone-on-start: true

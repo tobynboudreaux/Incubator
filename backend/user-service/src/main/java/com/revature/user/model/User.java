@@ -44,6 +44,4 @@ public class User {
 	private boolean isVerified;
 	
 	private User[] matches;
-	
-	private User[] messages;
 }
