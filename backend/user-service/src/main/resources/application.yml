@@ -1,0 +1,4 @@
+server:
+  port: 6996
+  
+spring:  application:    name: USER-SERVICE

@@ -8,5 +8,5 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/tobynboudreaux/Incubator/tree/main/backend/cloud-config-server
+          uri: https://github.com/mcdonalddylan/RedactedConfigServer
           clone-on-start: true

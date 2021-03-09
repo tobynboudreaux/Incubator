@@ -11,7 +11,7 @@ spring:
           uri: lb://USER-SERVICE
           predicates:
             - Path=/users/**
-        - id: MESSAGE-SERVICE
-          uri: lb://MESSAGE-SERVICE
+        - id: MSG-SERVICE
+          uri: lb://MSG-SERVICE
           predicates:
             - Path=/messages/**
