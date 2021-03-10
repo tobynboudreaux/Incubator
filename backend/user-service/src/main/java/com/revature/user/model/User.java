@@ -1,5 +1,8 @@
 package com.revature.user.model;
 
+import java.util.List;
+import java.util.Map;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -44,6 +47,4 @@ public class User {
 	
 	@Column(name="verified")
 	private boolean isVerified;
-	
-	private User[] matches;
 }

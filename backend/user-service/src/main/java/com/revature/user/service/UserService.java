@@ -31,7 +31,7 @@ public class UserService {
 		try 
 		{
 			User user = new User(0, username, email, password, photoUrl,
-					years, techStack, bio, false, null);
+					years, techStack, bio, false);
 			
 			repo.save(user);
 			return true;

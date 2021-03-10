@@ -15,3 +15,7 @@ spring:
           uri: lb://MSG-SERVICE
           predicates:
             - Path=/messages/**
+        - id: MATCH-SERVICE
+          uri: lb://MATCH-SERVICE
+          predicates:
+            - Path=/matches/**
