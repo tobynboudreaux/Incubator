@@ -1,0 +1,4 @@
+server:
+  port: 6997
+  
+spring:  application:    name: MSG-SERVICE

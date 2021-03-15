@@ -13,7 +13,7 @@ export const LoginPage = (props) => {
             password: password
         }
 
-        axios.post("http://localhost:8080/user/", userData)
+        axios.post("http://localhost:6969/users/login", userData)
         .then((response)=>{
             alert(response);
         })

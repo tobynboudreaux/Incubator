@@ -11,5 +11,17 @@ public class UserServiceApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(UserServiceApplication.class, args);
 	}
+	
+//	@Bean
+//	public WebMvcConfigurer corsConfigurer()
+//	{
+//		return new WebMvcConfigurer() {
+//			@Override
+//			public void addCorsMappings(CorsRegistry registry) {
+//		        registry.addMapping("/**");
+//		    }
+//		};
+//	}
+	
 
 }
