@@ -8,6 +8,8 @@ import { SignUpComponent } from './components/authentication/sign-up/sign-up.com
 import { LandingComponent } from './components/layout/landing/landing.component';
 import { HeadingComponent } from './components/layout/heading/heading.component';
 import { AuthService } from './components/authentication/auth.service';
+import { SignOutComponent } from './components/authentication/sign-out/sign-out.component';
+import { appDropDownDirective } from './components/shared/dropDown.directive';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { AuthService } from './components/authentication/auth.service';
     SignInComponent,
     SignUpComponent,
     LandingComponent,
-    HeadingComponent
+    HeadingComponent,
+    SignOutComponent,
+    appDropDownDirective
   ],
   imports: [
     BrowserModule,

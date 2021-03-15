@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../../authentication/auth.service';
+import { User } from '../../shared/user.model';
 
 @Component({
   selector: 'app-heading',
@@ -8,10 +10,21 @@ import { Component, OnInit } from '@angular/core';
 export class HeadingComponent implements OnInit {
   collapsed = true;
   collapsedDrop = true;
-
-  constructor() { }
+  currentUser: User;
+  
+  constructor(private authService: AuthService) { }
 
   ngOnInit(): void {
+    this.currentUser = this.authService.currentUser;
+    this.authService.userSignedIn.subscribe(
+      (currentUser: User) => {
+        this.currentUser = currentUser;
+      }
+    );
+  }
+
+  onSignOutBtnClick() {
+    this.authService.onSignOut();
   }
 
 }
