@@ -7,6 +7,7 @@ import { SignInComponent } from './components/authentication/sign-in/sign-in.com
 import { SignUpComponent } from './components/authentication/sign-up/sign-up.component';
 import { LandingComponent } from './components/layout/landing/landing.component';
 import { HeadingComponent } from './components/layout/heading/heading.component';
+import { AuthService } from './components/authentication/auth.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { HeadingComponent } from './components/layout/heading/heading.component'
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
