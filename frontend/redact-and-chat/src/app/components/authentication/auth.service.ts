@@ -19,7 +19,20 @@ export class AuthService {
     onSignUp(user: User) {
         console.log("signedUp!");
 
-        //fetch call here
+        fetch("http://localhost:6969/users/new",{
+            method: "POST",
+            mode: "no-cors",
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json"
+            },
+            body: JSON.stringify(user)
+        })
+        .then(resp=>resp.json())
+        .then(data=>{
+            console.log(data);
+        })
+        .catch(error=>console.log(error));
 
         this.setCurrentUser(user);
     }
