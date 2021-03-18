@@ -10,7 +10,29 @@ export class AuthService {
         console.log("signedIn!");
         console.log(user.username, user.password);
 
-        //fetch call hereeee
+        
+        fetch("http://localhost:6969/users/login",{
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(user)
+        })
+        .then(resp=>{
+            console.log(resp);
+            resp.json().then(data=>{
+                console.log(data);
+            })
+        })
+        .catch(error=>console.log(error));
+        
+        
+        fetch("http://localhost:6969/users/test")
+        .then(resp=>{
+            console.log(resp);
+            resp.json().then(data=>console.log(data));
+        });
+        
 
         this.setCurrentUser(user);
         console.log(user);
@@ -21,10 +43,8 @@ export class AuthService {
 
         fetch("http://localhost:6969/users/new",{
             method: "POST",
-            mode: "no-cors",
             headers: {
-                "Content-Type": "application/json",
-                Accept: "application/json"
+                "Content-Type": "application/json"
             },
             body: JSON.stringify(user)
         })

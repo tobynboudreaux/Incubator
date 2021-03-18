@@ -14,6 +14,7 @@ export class SignUpComponent implements OnInit {
   @ViewChild("pass2", {static: false}) password2Ref: ElementRef;
   @ViewChild("fName", {static: false}) firstNameRef: ElementRef;
   @ViewChild("lName", {static: false}) lastNameRef: ElementRef;
+  @ViewChild("email", {static: false}) emailRef: ElementRef;
   currentUser: User;
 
   constructor(private authService: AuthService) {}
@@ -34,10 +35,11 @@ export class SignUpComponent implements OnInit {
     const pass2 = this.password2Ref.nativeElement.value;
     const firstName = this.firstNameRef.nativeElement.value;
     const lastName = this.lastNameRef.nativeElement.value;
+    const email = this.emailRef.nativeElement.value;
 
     if(pass1 === pass2 && pass1 !== "" && pass2 !== "")
     {
-      const user = new User(username, pass1, firstName, lastName);
+      const user = new User(username, pass1, firstName, lastName, email);
       this.authService.onSignUp(user);
     }
   }

@@ -19,3 +19,14 @@ spring:
           uri: lb://MATCH-SERVICE
           predicates:
             - Path=/matches/**
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: 
+              - "http://localhost:4200"
+              - "http://localhost:3000"
+            allowedHeaders:
+              - content-type
+            allowedMethods:
+              - GET
+              - POST
